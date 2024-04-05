@@ -43,5 +43,15 @@
       align-items: center;
       padding: 0 20px;
     }
+   .facultysection{
+      margin-left: 30px;
+
+    }
+    .courses-container .box-1 img{
+      height: 45%;
+      border-top: 2px;
+      width: 90%;
+  
+  }
   
   }
