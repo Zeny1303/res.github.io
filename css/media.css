@@ -53,5 +53,36 @@
       width: 90%;
   
   }
+   .row{
+    gap: 40px;
+  }
+   .container-1 {
+    display: block;
+    
+}
+.foundation,
+.academyjee,
+.academyneet {
+    width: 80%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.res-about{
+  display: grid;
+  gap: 10px;
+}
+.res-about img{
+  height: 190px;
+  width:150px;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
   
   }
