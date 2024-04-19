@@ -1,52 +1,23 @@
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
-const slider = document.querySelector('.slider');
-const images = document.querySelectorAll('.image');
-
-let sliderNumber = 1;
-const length = images.length;
-
-
-const nextSlide=( )=>
-{
-    slider.style.transform = `translateX(-${sliderNumber * 800}px)`;
-    sliderNumber++;
-};
-
-const prevSlide=( )=>
-{
-    slider.style.transform = `translateX(-${(sliderNumber-2) * 800}px)`;
-    sliderNumber--;
-};
-
-const getFirstSlide=( )=>
-{
-    slider.style.transform = `translateX(0px)`;
-        sliderNumber = 1;
-};
-
-const getLastSlide=( )=>
-{
-    slider.style.transform = `translateX(-${
-      (length-1)*800}px)`;
-        sliderNumber = length;
-};
-
-
-right.addEventListener('click', () => {
-    sliderNumber < length ?
-       nextSlide() :
-    
-        getFirstSlide();
-       
-    
-});
-
-left.addEventListener('click', () => {
-    sliderNumber > 1 ?
-        prevSlide() :
-        getLastSlide();
-});
-
-
-
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
